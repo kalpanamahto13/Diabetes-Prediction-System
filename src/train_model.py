@@ -95,8 +95,8 @@ def main():
     if df is None:
         return
 
-    # Split features and target
-    X = df.drop('Outcome', axis=1)
+    # Split features and target, excluding Pregnancies for gender neutrality
+    X = df.drop(['Outcome', 'Pregnancies'], axis=1)
     y = df['Outcome']
 
     # Train-test split with stratification

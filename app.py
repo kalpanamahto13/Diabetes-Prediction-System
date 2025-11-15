@@ -19,8 +19,9 @@ def local_css():
             
     }
     .sub-header {
-        font-size: 1.5rem;
+        font-size: 4rem;
         color: #374151;
+        font-weight:bold;
         text-align: center;
         margin-bottom: 2rem;
     }
@@ -130,7 +131,6 @@ def get_user_input():
     st.sidebar.markdown('<p class="sidebar-header">🏥 Medical Information</p>', unsafe_allow_html=True)
 
     with st.sidebar.expander("📊 Patient Details", expanded=True):
-        pregnancies = st.slider('Number of Pregnancies', 0, 17, 1, help="Number of times pregnant")
         age = st.slider('Age (years)', 21, 81, 30, help="Patient's age in years")
 
     with st.sidebar.expander("🩸 Blood Tests", expanded=True):
@@ -146,7 +146,6 @@ def get_user_input():
         diabetes_pedigree = st.slider('Diabetes Pedigree Function', 0.078, 2.42, 0.372, 0.001, help="Diabetes pedigree function")
 
     features = {
-        'Pregnancies': pregnancies,
         'Glucose': glucose,
         'BloodPressure': blood_pressure,
         'SkinThickness': skin_thickness,
@@ -216,10 +215,6 @@ def risk_factor_analysis(features, probability):
     if features['BloodPressure'] > 90:
         medium_risk_factors.append("High Blood Pressure (>90 mm Hg)")
 
-    # Pregnancies
-    if features['Pregnancies'] > 5:
-        medium_risk_factors.append("Multiple Pregnancies (>5)")
-
     # Insulin
     if features['Insulin'] > 200:
         medium_risk_factors.append("High Insulin Level (>200 mu U/ml)")
@@ -247,7 +242,6 @@ def generate_report(features, prediction, probability):
 
     Patient Information:
     -------------------
-    Pregnancies: {features['Pregnancies']}
     Glucose: {features['Glucose']} mg/dL
     Blood Pressure: {features['BloodPressure']} mm Hg
     Skin Thickness: {features['SkinThickness']} mm
