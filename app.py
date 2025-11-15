@@ -83,6 +83,15 @@ def local_css():
         font-size: 0.9rem;
         margin-top: 2rem;
     }
+    .built-with {
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        text-align: center;
+        padding: 1rem;
+        margin-top: 2rem;
+        border-radius: 10px;
+        color: #374151;
+        font-size: 0.9rem;
+    }
     </style>
     """, unsafe_allow_html=True)
 
@@ -330,11 +339,16 @@ def main():
                 download_report(report)
 
     # Footer
-    st.markdown('<div class="footer">', unsafe_allow_html=True)
-    st.markdown("---")
-    st.markdown("**Disclaimer:** This tool is for educational purposes only and should not replace professional medical advice.")
-    st.markdown("Built with ❤️ using Streamlit and Machine Learning")
-    st.markdown('</div>', unsafe_allow_html=True)
+    col1, col2, col3 = st.columns([1, 3, 1])
+    with col2:
+        st.markdown('<div class="footer">', unsafe_allow_html=True)
+        st.markdown("---")
+        st.markdown("**Disclaimer:** This tool is for educational purposes only and should not replace professional medical advice.")
+        st.markdown('</div>', unsafe_allow_html=True)
+
+        st.markdown('<div class="built-with">', unsafe_allow_html=True)
+        st.markdown("Built with ❤️ using Streamlit and Machine Learning")
+        st.markdown('</div>', unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
