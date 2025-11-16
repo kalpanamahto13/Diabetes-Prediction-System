@@ -1,6 +1,4 @@
-# Diabetes Prediction Using Machine Learning
-
-A comprehensive machine learning project for predicting diabetes risk using the Pima Indians Diabetes Dataset. This project includes data exploration, model training, evaluation, and a user-friendly web application for predictions.
+The Diabetes Prediction System is a machine-learning-based application designed to predict whether a person is likely to have diabetes based on key health parameters. By analyzing medical attributes such as glucose levels, BMI, blood pressure, age, insulin levels, and other diagnostic features, the system identifies patterns associated with diabetes and produces a prediction with high accuracy.
 
 ## Live webiste link 
 - https://diabetes-prediction-system-mini-project.streamlit.app
