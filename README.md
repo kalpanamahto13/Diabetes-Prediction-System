@@ -2,6 +2,9 @@
 
 A comprehensive machine learning project for predicting diabetes risk using the Pima Indians Diabetes Dataset. This project includes data exploration, model training, evaluation, and a user-friendly web application for predictions.
 
+## Live webiste link 
+- https://diabetes-prediction-system-mini-project.streamlit.app
+
 ## 🚀 Features
 
 - **Data Exploration**: Comprehensive EDA with visualizations
@@ -29,63 +32,7 @@ A comprehensive machine learning project for predicting diabetes risk using the 
 7. DiabetesPedigreeFunction - Diabetes pedigree function
 8. Age - Age in years
 
-## 🛠 Installation
 
-### Prerequisites
-- Python 3.8+
-- pip package manager
-
-### Setup Instructions
-
-1. **Clone the repository** (if applicable) or navigate to the project directory
-
-2. **Create a virtual environment** (recommended):
-   ```bash
-   python -m venv diabetes_env
-   source diabetes_env/bin/activate  # On Windows: diabetes_env\Scripts\activate
-   ```
-
-3. **Install dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Prepare the dataset**:
-   - Place `diabetes.csv` in the `data/` folder
-   - If you don't have the dataset, the training script will download it automatically
-
-## 📈 Usage
-
-### 1. Data Exploration
-```bash
-python src/data_exploration.py
-```
-- Generates visualizations in `visualizations/` folder
-- Displays basic statistics and data insights
-
-### 2. Train Models
-```bash
-python src/train_model.py
-```
-- Trains three ML models on the dataset
-- Saves the best model and scaler to `models/` folder
-- Displays performance metrics for each model
-
-### 3. Evaluate Models
-```bash
-python src/evaluate_model.py
-```
-- Generates confusion matrices and ROC curves
-- Compares all models side-by-side
-- Saves evaluation plots to `visualizations/` folder
-
-### 4. Run Web Application
-```bash
-streamlit run app.py
-```
-- Opens interactive web app in browser
-- Input medical features and get diabetes risk prediction
-- Download detailed prediction reports
 
 ## 📊 Model Performance
 
@@ -154,29 +101,6 @@ diabetes-prediction/
 - **Report Download**: Generate and download prediction reports
 - **Professional UI**: Clean, medical-themed interface
 
-## 📝 Screenshots
-
-### Web Application Interface
-![App Screenshot](screenshots/app_interface.png)
-
-### Model Performance Comparison
-![ROC Curves](visualizations/roc_curves.png)
-
-### Feature Correlation Heatmap
-![Correlation Heatmap](visualizations/correlation_heatmap.png)
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## ⚠️ Disclaimer
 
 This tool is for educational and research purposes only. The predictions are based on machine learning models trained on historical data and should not be used as a substitute for professional medical advice, diagnosis, or treatment. Always consult with qualified healthcare professionals for medical decisions.
@@ -187,4 +111,5 @@ For questions or feedback, please open an issue in the repository.
 
 ---
 
-**Built with ❤️ using Python, Scikit-learn, and Streamlit**
+
+
